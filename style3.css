@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px 20px;
+    padding: 0;
+    background-color: white;
+    text-decoration: none;
+     background-image: url('logo.png'); /* Replace 'background-image.jpg' with your image file path */
+    background-size: 35%; /* Initial size */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Fixed background position */
+    background-position: center top; /* Position the image at the top-center */
+    margin: 1px 1px; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+header {
+    background-color: white;
+    color: blue;
+    padding: 20px;
+    text-align: center;
+}
+h2 {
+    margin-top: 0;
+    font-size: 26px;
+   
+}
+
+.navbar {
+    background-color: none; /* Background color of the navigation bar */
+    overflow: hidden;
+    color: black;
+    font-size: 60%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.logo {
+    float: left; /* Float the image to the left */
+    margin: 5px 7px; /* Adjust the margin for positioning */
+    width: 50px; /* Adjust the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.logo2 {
+    float: left; /* Float the image to the left */
+    margin: 15px 5px; /* Adjust the margin for positioning */
+    width: 60px; /* Adjust the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.logo3 {
+   /* float: left; /* Float the image to the left */
+   margin: 50px 40px; /* Adjust the margin for positioning */
+    width: 2px; /* Adjust the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+
+}
+.formater {
+   float: right; /* Float the image to the left */
+   
+}
+.signup-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    max-width: 400px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+
+}
+
+.signup-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signup-form button:hover {
+    background-color: #0056b3;
+}
+
+.signup-title {
+    font-size: 150%;
+
+}
+
+input[type = "text"],input[type = "number"],input[type = "email"],input[type = "password"]{
+
+width: 90%;
+
+}
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+
+.heading{
+    font-size: 250%;
+}
+
+
+.error{
+            color: red;
+            text-align: left;
+        }
+        .success{
+            color: green;
+        }
+                .input-control{
+    
+    }
+    .input-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 95%; 
+    }
+    .input-control{
+    display: flex;
+    flex-direction: column;
+    }
+    .input-control input:focus{
+    outline: 0; 
+    }
+    .input-control{
+    display: flex;
+    flex-direction: column;
+    }
+    .input-control.success input{
+    border-color: #09c372;
+        }
+    .input-control.error input{
+    border-color: #ff3860;
+        }
+    .input-control.error{
+    border-color: #ff3860;
+    font-size: 11px;
+    
+        }

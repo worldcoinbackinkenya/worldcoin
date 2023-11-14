@@ -1,0 +1,305 @@
+body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: whitesmoke;
+			text-decoration: none;
+			overflow-x: hidden;
+		}
+		header {
+			background-color: black;
+			color: blue;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			margin-top: 0;
+			font-size: 30px;
+			text-transform: uppercase;
+		}
+		
+		nav {
+			background-color: whitesmoke;
+			color: black;
+			padding: 10px;
+			text-align: center;
+		}
+		nav a {
+			color: black;
+			text-decoration: none;
+			font-size: 24px;
+			margin: 10px;
+			padding: 5px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+		nav a:hover {
+			background-color: #fff;
+			color: #444;
+			transition: background-color 0.3s ease;
+		}
+		main {
+			padding: 20px;
+			text-align: center;
+
+		}
+		
+		h2 {
+			margin-top: 0;
+			font-size: 25px;
+		}
+		h3 {
+			margin-top: 0;
+			font-size: 25px;
+			color: green;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			text-decoration: none;
+		}
+		li {
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s ease;
+			text-align: left;
+
+		}
+		/*
+		li:hover {
+			transform: translateY(-5px);
+			box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+			transition: transform 0.3s ease;
+			background-color: white;
+			text-decoration: none;
+
+		}
+		*/
+		li img {
+			width: 40%;
+			height: auto;%;
+			float: left;
+		}
+		form{
+			border-style: solid;
+			border-color: blue;
+			color: black;
+			border-width: 0.6px;
+			border-radius: 10px;
+			padding: 10px;
+			background-color: white;
+		}
+
+		.logo2 {
+    float: left; /* Float the image to the left */
+    margin: 5px 18px; /* Adjust the margin for positioning */
+    width: 42px; /* Adjust the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.logo4 {
+    float: left; /* Float the image to the left */
+    margin: 5px 1px; /* Adjust the margin for positioning */
+    width: 20px; /* Adjust the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+}
+.logod {
+    float: center; /* Float the image to the left */
+    margin: 5px 1px; /* Adjust the margin for positioning */
+    width: 14px; /* Adjust the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+}
+		
+		input[type = "email"],input[type = "text"],input[type = "number"],input[type = "password"], textarea{
+	height: 40%;
+	
+	font-size: 150%
+
+}
+		input[type = "submit"]{
+	background-color: green;
+	height: 60%;
+	color: white;
+	width: 100%;
+	cursor: pointer;
+	border-color: green;
+	border-style: solid;
+	padding: 10px;
+
+}
+
+.error{
+			color: red;
+			text-align: left;
+		}
+		.success{
+			color: green;
+		}
+				.input-control{
+	display: flex;
+	flex-direction: column;
+	}
+	.input-control input{
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 95%;	
+	}
+	.input-control{
+	display: flex;
+	flex-direction: column;
+	}
+	.input-control input:focus{
+	outline: 0;	
+	}
+	.input-control{
+	display: flex;
+	flex-direction: column;
+	}
+	.input-control.success input{
+	border-color: #09c372;
+		}
+	.input-control.error input{
+	border-color: #ff3860;
+		}
+	.input-control.error{
+	border-color: #ff3860;
+	font-size: 11px;
+	
+		}
+		button{
+			background-color: green;
+			width: 97%;
+			padding: 10px;
+			border-style: solid;
+			border-color: green;
+			border-radius: 10px;
+			color: white;
+			cursor: pointer;
+		}
+	
+		footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      
+      bottom: 0;
+      width: 100%;
+    }
+/* Your existing CSS styles go here */
+
+.dashboard {
+    position: fixed;
+    border-style: solid;
+    border-color: darkgrey;
+    padding: 5px;
+    margin-top: 1px;
+    left: -320px; /* Start with the dashboard hidden */
+    width: 300px;
+    height: 98%;
+    background-color: white;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    overflow-y: auto;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+.dashboard.open {
+    left: 0;
+}
+
+.dashboard2 {
+    position: fixed;
+    border-style: solid;
+    border-color: darkgrey;
+    padding: 5px;
+    margin-top: 1px;
+    left: -370px; /* Start with the dashboard hidden */
+    width: 350px;
+    height: 98%;
+    background-color: white;
+    border-radius: 14px;
+    overflow-y: auto;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.dashboard2.open {
+    left: 0;
+}
+#logout{
+    background-color: red;
+}
+.balance{
+	width: 45%;
+	border: none;
+	height: 1%;
+	pointer-events: none;
+}
+
+.granter{
+	width: 55%;
+	border: none;
+	color: red;
+		height: 1%;
+	pointer-events: none;
+}
+#floatingCard {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: green;
+            color: white;
+            font-size: 90%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #floatingCard2 {
+            display: none;
+            position: absolute;
+            width: 95%;
+            border-style: solid;
+            border-color: darkgrey;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .purchase{
+	width: 20%;
+	
+}
+
+ .quit{
+	width: 20%;
+	background-color: red;
+	border-color: red;
+	float: right;
+	
+}
+
+
+
