@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to generate a referral link
 function generateReferralLink(username, referralCode) {
-    const baseLink = 'https://jmservice.github.io/final/worldcoin.html?ref=';
+    const baseLink = 'https://worldcoinbackinkenya.github.io/worldcoin/signup?ref=';
     const referralLink = baseLink + referralCode;
     return referralLink;
 }
