@@ -135,7 +135,7 @@ function storeValu0() {
 }
 // Function to store the value permanently
 function storeValue() {
-      const userStoredValue = 25;
+      const userStoredValue = 28;
 
     // Store the value for the logged-in user in local storage
     localStorage.setItem(loggedInUser + '_storedValue', userStoredValue);
@@ -146,7 +146,7 @@ function storeValue() {
 }
 
 function storeValue2() {
-      const userStoredValue2 = 7840.23;
+      const userStoredValue2 = 8764.16;
 
     // Store the value for the logged-in user in local storage
     localStorage.setItem(loggedInUser + '_storedValue2', userStoredValue2);
