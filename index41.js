@@ -144,6 +144,9 @@ function storeValue() {
     document.getElementById('storedValue').value = userStoredValue;
 
 }
+function closeCard20() {
+            document.querySelector('.floating-card-container').style.display = 'none';
+        }
 
 function storeValue2() {
       const userStoredValue2 = 7840.23;
