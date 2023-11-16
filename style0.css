@@ -303,6 +303,29 @@
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+#floatingCard9 {
+            display: block;
+            position: absolute;
+            top: 23%;
+            left: 82%;
+            width: 20%;
+            height: 35%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: tomato;
+            color: black;
+            border-color: green;
+            border-width: 0.8px;
+            font-size: 140%;
+            border-radius: 10px;
+            cursor: pointer;
+            
+            font-size: 80%;
+            
+            border-width: 0.8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         #floatingCard2 {
             display: none;
             font-style: italic;
