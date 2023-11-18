@@ -320,6 +320,22 @@
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        #floatingCardwithdraw {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: grey;
+            color: white;
+            font-size: 80%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 #floatingCardinsufficient {
             display: none;
             font-style: italic;
@@ -439,6 +455,38 @@
             transform: translate(-50%, -50%);
             padding: 15px;
             background-color: red;
+            color: white;
+            font-size: 90%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #linkfloatingCard301 {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: grey;
+            color: white;
+            font-size: 90%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #linkfloatingCard201 {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: grey;
             color: white;
             font-size: 90%;
             border-radius: 5px;
