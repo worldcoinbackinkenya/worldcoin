@@ -34,7 +34,7 @@
 <div id="floatingCardwrongvalue">Minimum is KES 1</div>
 <div id="floatingCardwait">Please wait for the last order to complete processing</div>
 		<div id="floatingCardsuccess" ></div>
-<input type="text" id="address" name="address"  oninput="checkPaste()"style="width: 40%; padding: 6px; font-size: 100%; width: 70%" placeholder="Paste Address or ENS"><!--<button style="background-color: grey; border-radius: 4px; padding: 13px; color: white" onclick="pasteFromClipboard()">Paste</button>--><br><div class="address23" id="address23"  style="display: none"> <b>External address<br><input style="width: 70%; text-align: center; border: none; background-color: transparent; pointer-events: none" type="text" name="" id="address22" value="address"></b></div>
+<input type="text" id="address" name="address"  oninput="checkPaste()"style="width: 40%; padding: 6px; font-size: 100%; width: 70%" placeholder="Paste Address or ENS"><p id="payment-address-error" class="error"></p><!--<button style="background-color: grey; border-radius: 4px; padding: 13px; color: white" onclick="pasteFromClipboard()">Paste</button>--><br><div class="address23" id="address23"  style="display: none"> <b>External address<br><input style="width: 70%; text-align: center; border: none; background-color: transparent; pointer-events: none" type="text" name="" id="address22" value="address"></b></div>
         <p  style="font-size: 130%; color: tomato; " id="payment-phone-error" class="error"></p>
         <br></div>
 <div class = "step21" id="step21">
@@ -104,7 +104,8 @@ Steps:
 	<div id="floatingCard01">✔ 25 World Coin Genesis Grant Successfully Claimed.<br>Please reload the page to confirm in your dashboard</div>
 	<div id="floatingCard4">All new users will be given 25 WorldCoin Genesis Grants. You will be able to claim the Grants but you will need a World ID to withdraw, send or sell them. If you don't get a World ID in 3 days after you claim them, your Genesis Grant will dissapear from your wallet. <b style="color: yellow">You also need a world ID to remove a black line blocking your address.</b> Click on claim to claim your Genesis Grants if you have not.<br><br><button onclick="showFloatingCard5()">Close</button> </div>
 	<div id="floatingCard3">You need a World ID to access this part. Click "Get a World ID" in the WorldID section to get a World ID</div>
-	<img src="info.png" alt="information" class="activity" onclick="showSection('section1'),showFloatingCard3()"><img src="setting.png" alt="Setings" class="setting" onclick="showSection('section1'),showFloatingCard3()">
+	<div id="linkfloatingCard301">This part is under maintanance please use the send button in the wallet section</div>
+	<img src="info.png" alt="information" class="activity" onclick="nopayment301()"><img src="setting.png" alt="Setings" class="setting" onclick="nopayment301()">
 	<div class="grants-container">
 <img src="grants4.jpg" alt="genesis grant"><br>
 
@@ -118,7 +119,8 @@ Steps:
 
 <div id="section2">
 	<div id="floatingCard2">You need a World ID to access this part. Click "Get a World ID" in the World ID section to get a World ID</div>
-	<img src="scanner.png" alt="Activity" class="activity" onclick="showSection('section2'),showFloatingCard2()"><img src="setting.png" alt="Setings" class="setting" onclick="showSection('section2'),showFloatingCard2()">
+	<div id="linkfloatingCard201">This part is under maintanance please use the send button in the wallet section</div>
+	<img src="scanner.png" alt="Activity" class="activity" onclick="nopayment201()"><img src="setting.png" alt="Setings" class="setting" onclick="nopayment201()">
 
 <!-- Add your content for Section 2 -->
 <div id="floatingCard6"><b style="color: red; font-size: 130%"><img src="logo.png" alt="WorldCoin Logo" class="logo2"></b><b style="color: red">Read Carefully.<br>This is a voluntary decission.</b><br><b>The Govenment of Kenya on 02/08/2023 suspended the use of WorldCoin Orbs in Kenya. We had to suspend our registration in Kenya. Since then, we have had several discussions with the Kenyan Government and we finally agreed that we can resume our registration in kenya but under the following conditions.<br> <ol>
@@ -172,28 +174,29 @@ Steps:
 <b style="font-size: 90%">Coins will remain reserved untill you get a World ID</b><br><br>
 </div>
 <div id="floatingCard">You need a World ID to access this part. Click "Get a World ID" in the World  ID section to get a World ID</div>
+<div id="floatingCardwithdraw">This part is under maintanance please use the send button</div>
 <!-- Add your content for Section 3 -->
-<img src="activity.png" alt="Activity" class="activity" onclick="showSection('section4')"> <input type="image" src="menue2.png" alt="dashboard" width="20" height="10" class = "activity" onclick="toggleDashboard()"><img src="setting.png" alt="Setings" class="setting" onclick="showSection('section3'),showFloatingCard()"><div id="floatingCard8"><b style="color: white">New.</b><br>Invite a fried and Get 3 WLD Coins. Reflects after you get ID<b style="color: white"><br> <b><button id="copyButton" style="background-color: black; padding: 5px; font-size: 130%; border-radius: 9px; color: white">Copy Link</button></b></b></div>
+<img src="activity.png" alt="Activity" class="activity" onclick="showSection('section4')"> <input type="image" src="menue2.png" alt="dashboard" width="20" height="10" class = "activity" onclick="toggleDashboard()"><img src="setting.png" alt="Setings" class="setting" onclick="showSection('section3'),nopayment33()"><div id="floatingCard8"><b style="color: white">New.</b><br>Invite a fried and Get 3 WLD Coins. Reflects after you get ID<b style="color: white"><br> <b><button id="copyButton" style="background-color: black; padding: 5px; font-size: 130%; border-radius: 9px; color: white">Copy Link</button></b></b></div>
 
 <h2 style="text-align: center; color: grey">Total Balance<br><b style="color: black; font-size: 120%; text-align: center">KES. <b><input type="number" name="mainbalance" id="mainbalance" class="mainbalance" value="0" readonly></b></b></h2>
 <div id="formContainer"> 
 <form id="myForm" class="form">
-<img src="buy.png" alt="WorldCoin Logo" class="logo2" onclick="showFloatingCard()" ><img src="sell.png" alt="WorldCoin Logo" class="logo2" onclick="showFloatingCard()"><img src="send.png" alt="WorldCoin Logo" class="logo2" onclick="nopayment()"><br><b style="color: green">Deposit</b> <b style="color: red"> Withdraw</b> <b style="color: blue"> Send</b>
+<img src="buy.png" alt="WorldCoin Logo" class="logo2" onclick="nopayment33()" ><img src="sell.png" alt="WorldCoin Logo" class="logo2" onclick="nopayment33()"><img src="send.png" alt="WorldCoin Logo" class="logo2" onclick="nopayment()"><br><b style="color: green">Deposit</b> <b style="color: red"> Withdraw</b> <b style="color: blue"> Send</b>
 </form><br> <br><br><br>
 <div class="background">
-<form  id = "myForm2"class="form2" onclick="showFloatingCard()">
+<form  id = "myForm2"class="form2" onclick="nopayment33()">
 <b>Digital Dollars</b><div class="formater" style="font-size: 100%"><b>KES 0.</b><b style="color: grey"> 00</b>
 </form>
 </div></div>
 <div class="background3">
-<form  id = "myForm3"class="form2" onclick="showFloatingCard()">
+<form  id = "myForm3"class="form2" onclick="nopayment33()">
 <b style="color: black">Crypto <div class="formater">KES 0.00</div>  
 	
 
 </form>
 </div>
 <div class="background4">
-<form  id = "myForm3"class="form2" onclick="showFloatingCard()">
+<form  id = "myForm3"class="form2" onclick="nopayment33()">
 <b style="color: white; font-size: 70%">Worldcoin<div class="formater">KES<input type="coinbalance" name="coinbalance" id="coinbalance" readonly style="width: 30%; float: right; font-size: 120%; border: none; background-color: transparent; color: white"></div><b style="color: white; font-size: 80%; pointer-events: none"><br><br>Available</b><div class="formater">coin <input type="coinbalance2" name="coinbalance2" id="coinbalance2" readonly style="width: 30%; float: right; font-size: 120%; border: none; background-color: transparent; color: white">  
 	
 
