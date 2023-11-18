@@ -221,17 +221,83 @@ function storeValue2() {
                 linkfloatingCard.style.display = 'none';
             }, 2000);
         }
+
+        function linkfloatingCard301() {
+            var linkfloatingCard301 = document.getElementById('linkfloatingCard301');
+            
+            linkfloatingCard301.style.display = 'block';
+
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                linkfloatingCard301.style.display = 'none';
+            }, 2000);
+        }
+
+         function linkfloatingCard201() {
+            var linkfloatingCard201 = document.getElementById('linkfloatingCard201');
+            
+            linkfloatingCard201.style.display = 'block';
+
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                linkfloatingCard201.style.display = 'none';
+            }, 2000);
+        }
+
+        function floatingCardwithdraw() {
+            var floatingCardwithdraw = document.getElementById('floatingCardwithdraw');
+            
+            floatingCardwithdraw.style.display = 'block';
+
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                floatingCardwithdraw.style.display = 'none';
+            }, 3000);
+        }
+
         function closeCard20() {
             document.querySelector('.floating-card-container').style.display = 'none';
         }
 
         function nopayment() {
             const grant4 = document.getElementById('grant4');
-            if(grant4.value == 'None' || grant4.value == 'Not Verified' ){
+            if(grant4.value == 'Not Verified' ){
            showFloatingCard();
         }
         else{
             showSection('section6');
+        }
+    }
+
+    function nopayment33() {
+            const grant4 = document.getElementById('grant4');
+            if(grant4.value == 'Not Verified' ){
+           showFloatingCard();
+        }
+        else{
+            floatingCardwithdraw();
+        }
+    }
+
+    function nopayment301() {
+            const grant4 = document.getElementById('grant4');
+            if(grant4.value == 'Not Verified' ){
+           
+           showFloatingCard3();
+        }
+        else{
+           linkfloatingCard301(); 
+        }
+    }
+
+    function nopayment201() {
+            const grant4 = document.getElementById('grant4');
+            if(grant4.value == 'Not Verified' ){
+           
+           showFloatingCard2();
+        }
+        else{
+           linkfloatingCard201(); 
         }
     }
 
@@ -489,17 +555,17 @@ function signup() {
 
         // Validate email and password       
         if (address =='') {
-            document.getElementById("payment-phone-error").style.color = "red";
-            document.getElementById("payment-phone-error").textContent = "paste a wallet address";
+            document.getElementById("payment-address-error").style.color = "red";
+            document.getElementById("payment-address-error").textContent = "paste a wallet address";
             step21.style.display = 'none';
 
             return;
         } else {
-            document.getElementById("payment-phone-error").textContent = "";
+            document.getElementById("payment-address-error").textContent = "";
         }
         if(address.length <42||address.length >42){
-            document.getElementById("payment-phone-error").style.color = "red";
-            document.getElementById("payment-phone-error").textContent = "Invalid waIlet address";
+            document.getElementById("payment-address-error").style.color = "red";
+            document.getElementById("payment-address-error").textContent = "Invalid waIlet address format";
             document.getElementById("address22").value = "";
             address23.style.display = 'none';
             step21.style.display = 'none';
@@ -509,9 +575,9 @@ function signup() {
         else{
             
             address23.style.display = 'block';
-             document.getElementById("payment-phone-error").textContent = "";
+             document.getElementById("payment-address-error").textContent = "";
               var slicedValue = address.slice(0, 4) + '...' + address.slice(-4);
-
+              
             document.getElementById("address22").value = slicedValue;
 
              step21.style.display = 'block';
@@ -783,7 +849,3 @@ function showfloatingCardsuccess() {
                 
             }
             window.onload = onLoad;
-
-
-              
-
