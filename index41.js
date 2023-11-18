@@ -624,7 +624,7 @@ function signup() {
 
 
         document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
+    
 
     // Create a floating card with an error message
     var floatingCard = document.createElement('div');
