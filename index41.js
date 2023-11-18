@@ -1,5 +1,4 @@
 
-login
 // Get the logged-in user from local storage
 const loggedInUser = localStorage.getItem('loggedInUser');
 const storedNumbers = localStorage.getItem('generatedNumbers');
@@ -28,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const grantdValue01 = document.getElementById('grant1');
     const storedValue01 = localStorage.getItem(loggedInUser + '_storedValue01');
     const storedValueInput01 = document.getElementById('grant1');
+    const grantdValue0101 = document.getElementById('grant10');
+    const storedValue0101 = localStorage.getItem(loggedInUser + '_storedValue0101');
+    const storedValueInput0101 = document.getElementById('grant10');
     const grantdValue02 = document.getElementById('btnclaiming');
     const storedValue02 = localStorage.getItem(loggedInUser + '_storedValue02');
     const storedValueInput02 = document.getElementById('btnclaiming');
@@ -73,6 +75,16 @@ document.addEventListener('DOMContentLoaded', function() {
         grantdValue0.value = 'Not Verified';
     }
 
+    if(storedValue0101){
+        document.getElementById("grant10").style.color = "green";
+        grantdValue0101.value = storedValue0101;
+        
+        }else{
+        document.getElementById("grant10").style.color = "red";
+        grantdValue0101.value = 'None';
+    }
+
+
     if(storedValue01){
         document.getElementById("grant1").style.color = "green";
         grantdValue01.value = storedValue01;
@@ -102,6 +114,18 @@ function storeValu01() {
 
     // Display the stored value in the input box
     document.getElementById('storedValue01').value = userStoredValue01;
+    
+    }
+
+    function storeValu0101() {
+
+        
+    const userStoredValue0101 = 'Processing...';
+    // Store the value for the logged-in user in local storage
+    localStorage.setItem(loggedInUser + '_storedValue0101', userStoredValue0101);
+
+    // Display the stored value in the input box
+    document.getElementById('storedValue0101').value = userStoredValue0101;
     
     }
 
@@ -144,9 +168,6 @@ function storeValue() {
     document.getElementById('storedValue').value = userStoredValue;
 
 }
-function closeCard20() {
-            document.querySelector('.floating-card-container').style.display = 'none';
-        }
 
 function storeValue2() {
       const userStoredValue2 = 7840.23;
@@ -183,6 +204,13 @@ function storeValue2() {
             }, 5000);
         }
 
+ function showFloatingCard9() {
+            var floatingCard9 = document.getElementById('floatingCard9');
+            
+            floatingCard9.style.display = 'none';
+
+            // Automatically hide the floating card after 3 seconds
+                    }
         function linkfloatingCard() {
             var linkfloatingCard = document.getElementById('linkfloatingCard');
             
@@ -193,6 +221,19 @@ function storeValue2() {
                 linkfloatingCard.style.display = 'none';
             }, 2000);
         }
+        function closeCard20() {
+            document.querySelector('.floating-card-container').style.display = 'none';
+        }
+
+        function nopayment() {
+            const grant4 = document.getElementById('grant4');
+            if(grant4.value == 'None' || grant4.value == 'Not Verified' ){
+           showFloatingCard();
+        }
+        else{
+            showSection('section6');
+        }
+    }
 
         function showFloatingCardclaimed() {
             var floatingCard01 = document.getElementById('floatingCardclaimed');
@@ -234,6 +275,62 @@ function storeValue2() {
             }, 3000);
         }
 
+        function floatingCardinsufficient() {
+            var floatingCardinsufficient = document.getElementById('floatingCardinsufficient');
+            
+            floatingCardinsufficient.style.display = 'block';
+
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                floatingCardinsufficient.style.display = 'none';
+            }, 3000);
+        }
+
+        function floatingCardnovalue() {
+            var floatingCardnovalue = document.getElementById('floatingCardnovalue');
+            
+            floatingCardnovalue.style.display = 'block';
+
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                floatingCardnovalue.style.display = 'none';
+            }, 3000);
+        }
+
+        function floatingCardwrongvalue() {
+            var floatingCardwrongvalue = document.getElementById('floatingCardwrongvalue');
+            
+            floatingCardwrongvalue.style.display = 'block';
+
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                floatingCardwrongvalue.style.display = 'none';
+            }, 3000);
+        }
+
+        function floatingCardorderprocessing() {
+            var floatingCardorderprocessing = document.getElementById('floatingCardorderprocessing');
+            
+            floatingCardorderprocessing.style.display = 'block';
+
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                floatingCardorderprocessing.style.display = 'none';
+            }, 3000);
+        }
+
+        function floatingCardwait() {
+            var floatingCardwait = document.getElementById('floatingCardwait');
+            
+            floatingCardwait.style.display = 'block';
+
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                floatingCardwait.style.display = 'none';
+            }, 2500);
+        }
+
+
         function showFloatingCard3() {
             var floatingCard3 = document.getElementById('floatingCard3');
             
@@ -255,6 +352,8 @@ function storeValue2() {
                 floatingCardpayment.style.display = 'none';
             }, 6000);
         }
+
+        
 
         function floatingpaymentError() {
             var floatingpaymentError = document.getElementById('floatingpaymentError');
@@ -320,6 +419,7 @@ function storeValue2() {
             document.getElementById('section3').style.display = 'none';
             document.getElementById('section4').style.display = 'none';
             document.getElementById('section5').style.display = 'none';
+            document.getElementById('section6').style.display = 'none';
 
             // Show the selected section
             document.getElementById(sectionId).style.display = 'block';
@@ -376,6 +476,74 @@ function signup() {
         }
     }
 
+    
+    function paymentstep21()  {
+            
+        const address = document.getElementById("address").value;
+        const address22 = document.getElementById("address22").value;
+        var address23 = document.getElementById('address23');
+            
+            
+        
+        
+
+        // Validate email and password       
+        if (address =='') {
+            document.getElementById("payment-phone-error").style.color = "red";
+            document.getElementById("payment-phone-error").textContent = "paste a wallet address";
+            step21.style.display = 'none';
+
+            return;
+        } else {
+            document.getElementById("payment-phone-error").textContent = "";
+        }
+        if(address.length <42||address.length >42){
+            document.getElementById("payment-phone-error").style.color = "red";
+            document.getElementById("payment-phone-error").textContent = "Invalid waIlet address";
+            document.getElementById("address22").value = "";
+            address23.style.display = 'none';
+            step21.style.display = 'none';
+            step31.style.display = 'none'; 
+            return;
+        }
+        else{
+            
+            address23.style.display = 'block';
+             document.getElementById("payment-phone-error").textContent = "";
+              var slicedValue = address.slice(0, 4) + '...' + address.slice(-4);
+
+            document.getElementById("address22").value = slicedValue;
+
+             step21.style.display = 'block';
+        }
+        
+    }
+     function checkPaste() {
+            var inputBox = document.getElementById('address');
+            
+            // Use setTimeout to wait for the value to be updated after paste
+            setTimeout(function() {
+                var inputValue = inputBox.value;
+
+                // Check if the input value is not empty (something is pasted)
+                if (inputValue.trim() !== '') {
+                    // Call your function here
+                    paymentstep21(inputValue);
+                }
+            }, 0);
+        }
+
+
+     function pasteFromClipboard() {
+            navigator.clipboard.readText()
+                .then((text) => {
+                    document.getElementById('address').value = text;
+                })
+                .catch((err) => {
+                    console.error('Failed to read clipboard contents: ', err);
+                });
+        }
+
     function paymentstep4()  {
             
         const paymentcode = document.getElementById("paymentcode").value;
@@ -417,6 +585,25 @@ function signup() {
         }
             }
 
+            function paymentstep41()  {
+            
+        const paymentcode2 = document.getElementById("paymentcode2").value;
+         const inputValue2 = paymentcode2;
+          var lastbutton2 = document.getElementById('lastbutton2');
+
+        if (paymentcode2 =='') {
+            document.getElementById("payment-code-error").style.color = "red";
+            document.getElementById("payment-code-error").textContent = "Enter the amount you want to send";
+            lastbutton2.style.display = 'none';
+            
+            return;
+        } else {
+            document.getElementById("payment-code-error").textContent = "";
+            lastbutton2.style.display = 'block';
+        }
+        
+            }
+
     function paymentstep5()  {
         var grant4 = document.getElementById('grant4').value;
             
@@ -434,6 +621,7 @@ function signup() {
             showfloatingCardpayment();
             }
         }
+
 
         document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
@@ -470,6 +658,97 @@ function signup() {
 
             //
         }
+
+        function paymentstep31() {
+
+            var step31 = document.getElementById('step31');
+
+            scrollToTop2();
+            step31.style.display = 'block';
+            document.getElementById("payment-complete-error").style.color = "green";
+            document.getElementById("payment-complete-error").textContent = "";
+             //
+        }
+
+         function paymentstep301() {
+            var grant10 = document.getElementById('grant10').value;
+
+            const finalballance2 = document.getElementById("finalballance2").value;
+            if(grant10 == 'Processing...'){
+               floatingCardorderprocessing();
+            }
+            else if(finalballance2 == ''){
+                floatingCardnovalue();
+            }else{
+
+                paymentstep302();
+            }
+             //
+        }
+
+
+        function paymentstep302(){
+    const address = document.getElementById("address").value;
+    const address22 = document.getElementById("address22").value;
+    const finalballance = document.getElementById("finalballance").value;
+    const finalballance2 = document.getElementById("finalballance2").value;
+
+    const finalballance3 = parseInt(finalballance, 10);
+    const finalballance4 = parseInt(finalballance2, 10);
+
+    total = finalballance3 + finalballance4;
+    difference = finalballance3 - finalballance4;
+    if(finalballance4 > finalballance3){
+       floatingCardinsufficient(); 
+    }
+    else if(finalballance4 <= 0 ){
+       floatingCardwrongvalue();
+    }
+    else{
+       
+       showfloatingCardsuccess();
+       //alert('You have successfully sent KES ' +finalballance4+ ' to ' + address22 + ' your new balance is KES ' +difference);
+    }
+  }
+  
+function showfloatingCardsuccess() {
+    var grant10 = document.getElementById('grant10').value;
+ 
+    const address = document.getElementById("address").value;
+    const address22 = document.getElementById("address22").value;
+    const finalballance = document.getElementById("finalballance").value;
+    const finalballance2 = document.getElementById("finalballance2").value;
+
+    const finalballance3 = parseInt(finalballance, 10);
+    const finalballance4 = parseInt(finalballance2, 10);
+
+    total = finalballance3 + finalballance4;
+    difference = finalballance3 - finalballance4;
+            var floatingCardsuccess = document.getElementById('floatingCardsuccess');
+            floatingCardsuccess.style.display = 'block';
+            floatingCardsuccess.textContent = "Order Successful. Address: " + address22+ " Value KES: " +finalballance4 + ". Your balance will update when order processing completes.";
+            storeValu0101();
+            
+            
+            // Automatically hide the floating card after 3 seconds
+            setTimeout(function() {
+                floatingCardsuccess.style.display = 'none';
+            }, 17000);
+        }
+
+ function paymentstep303(){
+
+    const finalballance = document.getElementById("finalballance").value;
+    const finalballance2 = document.getElementById("finalballance2").value;
+
+    const finalballance3 = parseInt(finalballance, 10);
+    const finalballance4 = parseInt(finalballance2, 10);
+    total = finalballance3 + finalballance4;
+
+    const finalballance5 = difference.toString();
+     finalballance.value = finalballance5;
+     
+}
          function scrollToTop() {
             // Get the container or element to be scrolled
             const container = document.getElementById('step2');
@@ -494,9 +773,14 @@ function signup() {
             function onLoad(){
                const storeddValue2 = document.getElementById('storedValue2').value;
                const storeddValue = document.getElementById('storedValue').value;
+               const integerValue = parseInt(storeddValue2,10);
+
+
                 document.getElementById('mainbalance').value = storeddValue2;
                 document.getElementById('coinbalance').value = storeddValue2;
                 document.getElementById('coinbalance2').value = storeddValue;
+                document.getElementById('finalballance').value = integerValue;
+                
             }
             window.onload = onLoad;
 
