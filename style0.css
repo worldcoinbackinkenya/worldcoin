@@ -34,7 +34,10 @@
             box-sizing: border-box;
         }
 
-        
+        #address23{
+            display: none;
+           
+        }
 
         #buttonRight, #buttonCenter, #buttonLeft {
             position: fixed;
@@ -244,7 +247,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        #floatingpaymentError {
+        
+        #floatingCard20 {
             display: none;
             position: fixed;
             top: 50%;
@@ -258,7 +262,6 @@
             font-style: italic;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
         #floatingCard01 {
             display: none;
             font-style: italic;
@@ -303,26 +306,96 @@
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-#floatingCard9 {
-            display: block;
-            position: absolute;
-            top: 23%;
-            left: 82%;
-            width: 20%;
-            height: 35%;
+#floatingCardinsufficient {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            width: 90%;
             transform: translate(-50%, -50%);
             padding: 15px;
-            background-color: tomato;
-            color: black;
-            border-color: green;
-            border-width: 0.8px;
-            font-size: 140%;
-            border-radius: 10px;
-            cursor: pointer;
-            
+            background-color: red;
+            color: white;
             font-size: 80%;
-            
-            border-width: 0.8px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #floatingCardnovalue {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: red;
+            color: white;
+            font-size: 80%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .floating-card-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: #3498db; /* Change the background color */
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #floatingCardwrongvalue {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: red;
+            color: white;
+            font-size: 80%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+         #floatingCardorderprocessing {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: red;
+            color: white;
+            font-size: 80%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #floatingCardwait {
+            display: none;
+            font-style: italic;
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: red;
+            color: white;
+            font-size: 80%;
+            border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -450,6 +523,32 @@
             border-width: 0.8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        #payment2000{
+        	text-align: center;
+        }
+
+#floatingCard9 {
+            display: block;
+            position: absolute;
+            top: 23%;
+            left: 82%;
+            width: 20%;
+            height: 35%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            background-color: tomato;
+            color: black;
+            border-color: green;
+            border-width: 0.8px;
+            font-size: 140%;
+            border-radius: 10px;
+            cursor: pointer;
+            
+            font-size: 80%;
+            
+            border-width: 0.8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
        
         .wldid{
@@ -504,7 +603,7 @@
 }
 .payment{
 	font-size: 250%;
-	color: green;
+	color: z;
 	margin-left: 4px;
 
 }.payment2{
@@ -512,6 +611,18 @@
 	margin-left: 4px;
 
 }
+
+.payment21{
+	font-size: 250%;
+	color: z;
+	margin-left: 4px;
+
+}.payment21{
+	font-size: 120%;
+	margin-left: 4px;
+
+}
+
 .paymentphone{
 	font-size: 120%;
 	width: 30%;
@@ -523,6 +634,14 @@
 }
 
 .step3{
+	display: none;
+}
+
+.step21{
+	display: none;
+}
+
+.step31{
 	display: none;
 }
 .dashboard {
@@ -563,6 +682,14 @@
 	pointer-events: none;
 }
 
+.granter10{
+	width: 80%;
+	border: none;
+	color: red;
+		height: 1%;
+	pointer-events: none;
+}
+
 .logod {
     float: center; /* Float the image to the left */
     margin: 5px 1px; /* Adjust the margin for positioning */
@@ -592,14 +719,17 @@
 	
 
 }
-.floating-card-container {
+
+#floatingCardsuccess {
             position: fixed;
+            display: none;
             top: 50%;
+            font-size: 130%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 300px;
             padding: 20px;
-            background-color: #3498db; /* Change the background color */
+            background-color: green; /* Change the background color */
             color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
