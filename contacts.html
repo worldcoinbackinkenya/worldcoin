@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Picker Example</title>
+</head>
+<body>
+
+<button onclick="pickContact()">Pick a Contact</button>
+
+<script>
+    async function pickContact() {
+        try {
+            const contact = await navigator.contacts.pick();
+            console.log("Selected contact:", contact);
+            alert("Selected contact: " + JSON.stringify(contact));
+        } catch (error) {
+            console.error("Error picking contact:", error);
+            alert("Error picking contact: " + error.message);
+        }
+    }
+</script>
+
+</body>
+</html>
