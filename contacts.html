@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Picker Example</title>
+    <title>Pick Contact</title>
 </head>
 <body>
+    <button id="pickContactButton">Pick Contact</button>
 
-<button onclick="pickContact()">Pick a Contact</button>
+    <div id="selectedContactInfo"></div>
 
-<script>
-    async function pickContact() {
-        try {
-            const contact = await navigator.contacts.pick();
-            console.log("Selected contact:", contact);
-            alert("Selected contact: " + JSON.stringify(contact));
-        } catch (error) {
-            console.error("Error picking contact:", error);
-            alert("Error picking contact: " + error.message);
-        }
-    }
-</script>
+    <script>
+        const pickContactButton = document.getElementById('pickContactButton');
+        const selectedContactInfo = document.getElementById('selectedContactInfo');
 
+        pickContactButton.addEventListener('click', async () => {
+            // Check if the browser supports the Contacts API
+            if (!navigator.contacts || !navigator.contacts.pickContact) {
+                alert('Your browser does not support the Contacts API.');
+                return;
+            }
+
+            // Pick a contact from the user's phone contacts list
+            try {
+                const contact = await navigator.contacts.pickContact();
+                const contactInfo = `
+                    <p>Name: ${contact.name}</p>
+                    <p>Phone Number: ${contact.tel[0].value}</p>
+                    <p>Email Address: ${contact.email[0].value}</p>
+                `;
+                selectedContactInfo.innerHTML = contactInfo;
+            } catch (error) {
+                console.error(error);
+            }
+        });
+    </script>
 </body>
 </html>
