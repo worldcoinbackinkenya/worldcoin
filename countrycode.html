@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Code Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #countryCodePicker {
+            display: flex;
+            align-items: center;
+        }
+
+        #countryList {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="countryCodePicker">
+    <select id="countryList"></select>
+    <button onclick="getSelectedCountryCode()">Get Country Code</button>
+</div>
+
+<script>
+    // Function to fetch and populate the country list
+    function populateCountryList() {
+        const countryList = document.getElementById('countryList');
+        
+        // Fetch country data from Rest Countries API
+        fetch('https://restcountries.com/v2/all')
+            .then(response => response.json())
+            .then(data => {
+                // Populate the select element with country names and codes
+                data.forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country.alpha2Code;
+                    option.text = `${country.name} (+${country.callingCodes[0]})`;
+                    countryList.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching country data:', error));
+    }
+
+    // Function to get the selected country code
+    function getSelectedCountryCode() {
+        const countryList = document.getElementById('countryList');
+        const selectedCountryCode = countryList.value;
+
+        if (selectedCountryCode) {
+            alert(`Selected Country Code: +${selectedCountryCode}`);
+        } else {
+            alert('Please select a country.');
+        }
+    }
+
+    // Populate the country list on page load
+    document.addEventListener('DOMContentLoaded', populateCountryList);
+</script>
+
+</body>
+</html>
